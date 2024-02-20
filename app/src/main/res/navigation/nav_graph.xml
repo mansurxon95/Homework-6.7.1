@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/spleshFragment">
+
+    <fragment
+        android:id="@+id/spleshFragment"
+        android:name="com.example.a6711.SpleshFragment"
+        android:label="fragment_splesh"
+        tools:layout="@layout/fragment_splesh" >
+        <action
+            android:id="@+id/action_spleshFragment_to_homFragment"
+            app:destination="@id/homFragment"
+            app:popUpTo="@id/spleshFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homFragment"
+        android:name="com.example.a6711.HomFragment"
+        android:label="fragment_hom"
+        tools:layout="@layout/fragment_hom" >
+        <action
+            android:id="@+id/action_homFragment_to_allFragment"
+            app:destination="@id/allFragment" />
+        <action
+            android:id="@+id/action_homFragment_to_pasportFragment"
+            app:destination="@id/pasportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allFragment"
+        android:name="com.example.a6711.AllFragment"
+        android:label="fragment_all"
+        tools:layout="@layout/fragment_all" >
+        <action
+            android:id="@+id/action_allFragment_to_pasportFragment"
+            app:destination="@id/pasportFragment" />
+        <action
+            android:id="@+id/action_allFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pasportFragment"
+        android:name="com.example.a6711.PasportFragment"
+        android:label="fragment_pasport"
+        tools:layout="@layout/fragment_pasport" >
+        <action
+            android:id="@+id/action_pasportFragment_to_homFragment"
+            app:destination="@id/homFragment"
+            app:popUpTo="@id/homFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFragment"
+        android:name="com.example.a6711.ViewFragment"
+        android:label="fragment_view"
+        tools:layout="@layout/fragment_view" />
+</navigation>
